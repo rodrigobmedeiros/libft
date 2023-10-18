@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 07:14:04 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/17 07:32:29 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/18 13:32:25 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isascii(int c)
@@ -18,4 +18,3 @@ int	ft_isascii(int c)
 	del = 127;
 	return (c >= null_char && c <= del);
 }
-
