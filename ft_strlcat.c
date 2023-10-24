@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:21:05 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/23 22:39:48 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/24 07:01:43 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,10 +20,8 @@ t_size	ft_strlcat(char *dst, const char *src, t_size size)
 	dst_length = ft_strlen(dst);
 	length_to_add = ft_strlen(src);
 	total_size = dst_length + length_to_add;
-	if (size == 0)
-		return (length_to_add);
 	if (dst_length >= size)
-		return (dst_length + length_to_add);
+		return (length_to_add + size);
 	dst += dst_length;
 	size -= dst_length;
 	if (length_to_add >= size)
