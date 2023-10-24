@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:08:08 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/22 15:12:19 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/24 07:06:17 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -18,6 +18,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_toupper(int c);
 void	*ft_memset(void *s, int c, t_size n);
 void	*ft_memcpy(void *dest, void *src, t_size n);
 void	*ft_memmove(void *dest, void *src, t_size n);
