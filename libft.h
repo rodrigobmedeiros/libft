@@ -6,11 +6,12 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:08:08 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/25 22:19:25 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/26 08:59:09 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 #define LIBFT_H
+#include <stdlib.h>
 
 typedef int	t_size;
 int		ft_isalpha(int c);
@@ -28,9 +29,11 @@ void	*ft_memcpy(void *dest, void *src, t_size n);
 void	*ft_memmove(void *dest, void *src, t_size n);
 void    *ft_memchr(const void *s, int c, t_size n);
 void	ft_bzero(void *s, t_size n);
+void	*ft_calloc(t_size nmemb, t_size size);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, t_size len);
+char	*ft_strdup(const char *s);
 t_size		ft_strlen(const char *s);
 t_size		ft_strlcpy(char *dst, const char *src, t_size size);
 t_size		ft_strlcat(char *dst, const char *src, t_size size);
