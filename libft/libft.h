@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:08:08 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/31 09:05:12 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/31 18:51:53 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -33,6 +33,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int nbr, int fd);
 void	*ft_calloc(t_size nmemb, t_size size);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
