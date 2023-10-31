@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:08:08 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/26 18:48:24 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/28 07:16:00 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -36,6 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, t_size len);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, t_size len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 t_size		ft_strlen(const char *s);
 t_size		ft_strlcpy(char *dst, const char *src, t_size size);
 t_size		ft_strlcat(char *dst, const char *src, t_size size);
