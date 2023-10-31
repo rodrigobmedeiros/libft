@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:08:08 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/28 07:16:00 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/31 09:05:12 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -29,6 +29,10 @@ void	*ft_memcpy(void *dest, void *src, t_size n);
 void	*ft_memmove(void *dest, void *src, t_size n);
 void    *ft_memchr(const void *s, int c, t_size n);
 void	ft_bzero(void *s, t_size n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 void	*ft_calloc(t_size nmemb, t_size size);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
@@ -37,6 +41,7 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, t_size len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_size		ft_strlen(const char *s);
 t_size		ft_strlcpy(char *dst, const char *src, t_size size);
 t_size		ft_strlcat(char *dst, const char *src, t_size size);
