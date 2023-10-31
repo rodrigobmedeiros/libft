@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 18:35:35 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/31 19:23:18 by robernar         ###   ########.fr       */
+/*   Created: 2023/10/31 19:02:20 by robernar          #+#    #+#             */
+/*   Updated: 2023/10/31 19:32:43 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -35,27 +35,30 @@ char	char_from_int(int nbr)
 	return (nbr + 48);
 }
 
-void	ft_putnbr_fd(int nbr, int fd)
+char	*ft_itoa(int n)
 {
 	int		signal;
 	int		i_num;
-	char	reverse_num[10];
+	char	*num;
 
+	num = (char *)malloc(sizeof(char) * 11);
+	if (!num)
+		return ((void *)0);
 	signal = 1;
-	if (nbr < 0)
+	i_num = 0;
+	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
+		*num++ = '-';
 		signal = -1;
 	}
-	i_num = 0;
-	while (nbr / 10 != 0)
+	while (n / 10 != 0)
 	{
-		reverse_num[i_num] = char_from_int(signal * (nbr % 10));
-		nbr = nbr / 10;
+		num[i_num] = char_from_int(signal * (n % 10));
+		n = n / 10;
 		i_num++;
 	}
-	reverse_num[i_num++] = char_from_int(signal * (nbr % 10));
-	reverse_num[i_num] = '\0';
-	ft_strrev(reverse_num);
-	ft_putstr_fd(reverse_num, fd);
+	num[i_num++] = char_from_int(signal * (n % 10));
+	num[i_num] = '\0';
+	ft_strrev(num);
+	return (num);
 }
