@@ -6,12 +6,12 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:02:20 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/31 19:32:43 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/01 06:36:32 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void static	ft_strrev(char *str)
+static void	ft_strrev(char *str)
 {
 	int	half;
 	int	size;
@@ -30,7 +30,7 @@ void static	ft_strrev(char *str)
 	}
 }
 
-char	char_from_int(int nbr)
+static char	char_from_int(int nbr)
 {
 	return (nbr + 48);
 }
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 	int		i_num;
 	char	*num;
 
-	num = (char *)malloc(sizeof(char) * 11);
+	num = (char *)malloc(sizeof(char) * 12);
 	if (!num)
 		return ((void *)0);
 	signal = 1;
@@ -53,12 +53,13 @@ char	*ft_itoa(int n)
 	}
 	while (n / 10 != 0)
 	{
-		num[i_num] = char_from_int(signal * (n % 10));
+		num[i_num++] = char_from_int(signal * (n % 10));
 		n = n / 10;
-		i_num++;
 	}
 	num[i_num++] = char_from_int(signal * (n % 10));
 	num[i_num] = '\0';
 	ft_strrev(num);
+	if (signal < 0)
+		num--;
 	return (num);
 }
