@@ -6,11 +6,10 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 07:13:39 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/05 18:48:30 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/05 21:02:47 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 
 static char	*ft_create_str_from_char(char c)
 {
@@ -27,15 +26,17 @@ static int	ft_count_words(char *s, char c)
 	int	counter;
 
 	counter = 0;
-	if (!*s)
+	if (*s == '\0')
 		return (counter);
+	s[ft_strlen(s)] = c;
+	s[ft_strlen(s)] = '\0';
 	while (*s)
 	{
 		if (*s == c)
 		{
 			counter++;
 			while (*s == c)
-				s++;	
+				s++;
 		}
 		else
 			s++;
@@ -48,26 +49,25 @@ char	**ft_split(char const *s, char c)
 	char	*cpy_s;
 	char	*char_set;
 	char	**words;
-	int	n_words;
+	int		n_words;
+	int		i;
 
+	i = 0;
 	char_set = ft_create_str_from_char(c);
-	words = (char **)malloc(sizeof(char *) * 1);
-	if (!words)
+	cpy_s = (char *)malloc(sizeof(char) * (ft_strlen(s) + 2));
+	cpy_s = ft_strtrim(s, char_set);
+	n_words = ft_count_words(cpy_s, c);
+	words = (char **)malloc(sizeof(char *) * (n_words + 1));
+	if (!words || n_words == 0)
 	{
 		*words = ((void *)0);
-		return words;
+		return (words);
 	}
-	cpy_s = (char	*)malloc(sizeof(char) * (ft_strlen(s) + 2));
-	cpy_s = ft_strtrim(s, char_set);
-	cpy_s[ft_strlen(cpy_s)] = c;
-	cpy_s[ft_strlen(cpy_s)] = '\0';
-	n_words = ft_count_words(cpy_s, c);
-	printf("%s\n", cpy_s);
-	printf("%d\n", n_words);
+	while (*cpy_s)
+	{
+		words[i++] = ft_substr(cpy_s, 0, ft_strchr(cpy_s, c) - cpy_s);
+		cpy_s = ft_strchr(cpy_s, c) + 1;
+	}
+	words[i] = ((void *)0);
 	return (words);
-}
-
-int main()
-{
-	ft_split(",,,,rodrigo,bernardo,medeiros,,,,,", ',');
 }
