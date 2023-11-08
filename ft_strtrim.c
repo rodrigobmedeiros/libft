@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 06:43:19 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/05 19:53:00 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/07 07:20:37 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,5 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s++;
 	while (ft_strrchr(set, *s_end) && s_end > s)
 		s_end--;
-	return (ft_substr(s1, s - s1, s_end - s + 1));
+	trimmed = ft_substr(s1, s - s1, s_end - s + 1);
+	return (trimmed);
 }
