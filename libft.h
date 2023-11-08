@@ -6,14 +6,14 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:08:08 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/05 20:49:04 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/08 09:24:56 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <stdlib.h>
+# define LIBFT_H
+# include <stdlib.h>
 
-typedef	long	t_size;
+typedef long	t_size;
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
