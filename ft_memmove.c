@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 05:06:36 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/26 08:46:15 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:17:15 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dest, void *src, t_size n)
 	i = 0;
 	d = dest;
 	s = src;
+	if (!d && !s)
+		return (dest);
 	if (s < d)
 	{
 		i = n - 1;
