@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 07:13:39 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/11 12:22:39 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:34:40 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -81,7 +81,6 @@ char	**ft_split(char const *s, char c)
 	char	*cpy_s;
 	char	*start;
 	char	**words;
-	int		n_words;
 	int		i;
 
 	if (!s)
@@ -92,8 +91,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	start = cpy_s;
 	cpy_s = ft_move_pointer_to_next_non_delimiter(cpy_s, c);
-	n_words = ft_count_words(s, c);
-	words = (char **)malloc(sizeof(char *) * (n_words + 1));
+	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!words)
 		return (NULL);
 	while (*cpy_s)
