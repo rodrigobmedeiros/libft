@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 07:13:39 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/11 00:55:35 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:00:13 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -57,7 +57,7 @@ static char	*ft_add_delimiter_to_end(char const *s, char c)
 	return (cpy_s);
 }
 
-static char	*ft_allocate_word(char 	**words, char *cpy_s, int i, char c)
+static char	*ft_allocate_word(char **words, char *cpy_s, int i, char c)
 {
 	char	*substr;
 
@@ -93,7 +93,7 @@ char	**ft_split(char const *s, char c)
 	if (!words)
 		return (NULL);
 	while (*cpy_s)
-	{	
+	{
 		cpy_s = ft_allocate_word(words, cpy_s, i++, c);
 		if (!cpy_s)
 			return (NULL);
@@ -103,7 +103,7 @@ char	**ft_split(char const *s, char c)
 	return (words);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
 	char	*s = "      split       this for   me  !       ";
@@ -126,4 +126,4 @@ int main()
 	free(result);
 	printf("Passou no teste mas nao deveria\n");
 	return (0);
-}
+}*/
