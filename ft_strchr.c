@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 08:08:39 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/24 08:49:45 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:15:50 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,5 +24,5 @@ char	*ft_strchr(const char *s, int c)
 			return (char_s);
 		char_s++;
 	}
-	return ((void *)0);
+	return (NULL);
 }

@@ -6,15 +6,15 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 23:05:01 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/26 08:16:14 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:13:01 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, t_size n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*arr;
-	t_size			i;
+	size_t			i;
 
 	arr = s;
 	i = 0;

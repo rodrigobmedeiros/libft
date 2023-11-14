@@ -6,16 +6,16 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:21:05 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/09 16:33:26 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:17:48 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_size	ft_strlcat(char *dst, const char *src, t_size size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	t_size	dst_length;
-	t_size	length_to_add;
-	t_size	total_size;
+	size_t	dst_length;
+	size_t	length_to_add;
+	size_t	total_size;
 
 	dst_length = ft_strlen(dst);
 	length_to_add = ft_strlen(src);

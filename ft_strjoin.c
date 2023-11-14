@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:41:23 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/26 18:48:45 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:17:12 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h" 
@@ -14,8 +14,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s;
-	t_size	s1_len;
-	t_size	s2_len;
+	size_t	s1_len;
+	size_t	s2_len;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

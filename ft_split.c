@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 07:13:39 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/14 09:05:27 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/14 20:26:26 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,7 +39,7 @@ static char	*ft_move_pointer_to_next_non_delimiter(char const *s, char c)
 	char	*cpy_s;
 
 	cpy_s = (char *)s;
-	while (*cpy_s == c && (t_size)(cpy_s - s) < ft_strlen(s))
+	while (*cpy_s == c && (size_t)(cpy_s - s) < ft_strlen(s))
 		cpy_s++;
 	return (cpy_s);
 }

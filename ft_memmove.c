@@ -6,18 +6,18 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 05:06:36 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/14 19:59:34 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/14 20:12:39 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	ft_cpy_char_down(char *d, char *s, t_size i)
+static int	ft_cpy_char_down(char *d, char *s, size_t i)
 {
 	d[i] = s[i];
 	return (--i);
 }
 
-static int	ft_cpy_char_up(char *d, char *s, t_size i)
+static int	ft_cpy_char_up(char *d, char *s, size_t i)
 {
 	d[i] = s[i];
 	return (++i);
@@ -33,11 +33,11 @@ static void	ft_segfault_when_needed(char *d, char *s)
 		d[0] = s[0];
 }
 
-void	*ft_memmove(void *dest, void *src, t_size n)
+void	*ft_memmove(void *dest, void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	t_size	i;
+	size_t	i;
 
 	i = 0;
 	d = dest;

@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:50:04 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/17 07:04:02 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:14:34 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 static int	ft_isupper(int c)

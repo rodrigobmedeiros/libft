@@ -6,12 +6,12 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:35:35 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/14 08:06:36 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:13:56 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_strrev(char *str)
+static void	ft_strrev(char *str)
 {
 	int	half;
 	int	size;
@@ -30,7 +30,7 @@ void	ft_strrev(char *str)
 	}
 }
 
-char	char_from_int(int nbr)
+static char	char_from_int(int nbr)
 {
 	return (nbr + 48);
 }

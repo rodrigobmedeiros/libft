@@ -6,14 +6,14 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 05:26:13 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/09 17:49:50 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:19:41 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, t_size len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	t_size	little_len;
+	size_t	little_len;
 
 	little_len = ft_strlen(little);
 	if (little_len == 0)

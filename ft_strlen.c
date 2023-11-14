@@ -6,12 +6,12 @@
 /*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 22:14:32 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/19 23:10:48 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:18:31 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_size	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	unsigned long	i;
 

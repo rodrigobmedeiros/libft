@@ -6,15 +6,15 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 00:00:27 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/20 00:11:06 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 20:07:32 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_bzero(void *s, t_size n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*arr;
-	t_size			i;
+	size_t			i;
 
 	arr = s;
 	i = 0;
