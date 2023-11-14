@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:02:20 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/11 13:21:15 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/14 08:02:23 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -45,7 +45,7 @@ int	ft_add_signal_if_negative(char *num, int index)
 
 static char	*ft_realloc(char *s)
 {
-	char *re_s;
+	char	*re_s;
 
 	re_s = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!re_s)
