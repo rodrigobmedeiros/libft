@@ -6,21 +6,31 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 05:06:36 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/14 19:08:54 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/14 19:59:34 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_cpy_char_down(char *d, char *s, t_size i)
+static int	ft_cpy_char_down(char *d, char *s, t_size i)
 {
 	d[i] = s[i];
 	return (--i);
 }
 
-int	ft_cpy_char_up(char *d, char *s, t_size i)
+static int	ft_cpy_char_up(char *d, char *s, t_size i)
 {
 	d[i] = s[i];
 	return (++i);
+}
+
+static void	ft_segfault_when_needed(char *d, char *s)
+{
+	if (!d && !s)
+		return ;
+	if (!d)
+		d[0] = s[0];
+	if (!s)
+		d[0] = s[0];
 }
 
 void	*ft_memmove(void *dest, void *src, t_size n)
@@ -34,6 +44,7 @@ void	*ft_memmove(void *dest, void *src, t_size n)
 	s = src;
 	if ((!d && !s) || n == 0)
 		return (dest);
+	ft_segfault_when_needed(d, s);
 	if (s < d)
 	{
 		i = n - 1;
@@ -43,7 +54,7 @@ void	*ft_memmove(void *dest, void *src, t_size n)
 	}
 	else
 	{
-		while (i < n && s[i] && d[i])
+		while (i < n)
 		{
 			i = ft_cpy_char_up(d, s, i);
 		}
