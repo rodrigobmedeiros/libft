@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:21:05 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/09 16:33:26 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:33:26 by robernar         ###   ########.rj       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

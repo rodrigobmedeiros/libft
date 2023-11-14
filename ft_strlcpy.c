@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 06:22:02 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/26 09:07:28 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/26 09:07:28 by robernar         ###   ########.rj       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

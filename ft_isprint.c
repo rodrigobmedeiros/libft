@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 22:07:59 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/19 22:08:45 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/19 22:08:45 by robernar         ###   ########.rj       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isprint(int c)

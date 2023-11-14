@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 05:06:36 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/09 17:40:07 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:40:07 by robernar         ###   ########.rj       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

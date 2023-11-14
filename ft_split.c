@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 07:13:39 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/11 12:34:40 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:34:40 by robernar         ###   ########.rj       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -104,28 +104,3 @@ char	**ft_split(char const *s, char c)
 	free(start);
 	return (words);
 }
-
-/*#include <stdio.h>
-int main()
-{
-	char	*s = "      split       this for   me  !       ";
-	char	**result = ft_split(s, ' ');
-	if (!result)
-	{
-		printf("Retornou nulo entao ta certo");
-		return (0);
-	}
-	printf("%s\n", result[0]);
-	free(result[0]);
-	printf("%s\n", result[1]);
-	free(result[1]);
-	printf("%s\n", result[2]);
-	free(result[2]);
-	printf("%s\n", result[3]);
-	free(result[3]);
-	printf("%s\n", result[4]);
-	free(result[4]);
-	free(result);
-	printf("Passou no teste mas nao deveria\n");
-	return (0);
-}*/

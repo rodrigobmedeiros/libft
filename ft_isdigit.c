@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robernar <robernar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 23:05:48 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/16 23:07:12 by robernar         ###   ########.fr       */
+/*   Updated: 2023/10/16 23:07:12 by robernar         ###   ########.rj       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isdigit(int c)
