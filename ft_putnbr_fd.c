@@ -6,16 +6,12 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:35:35 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/09 08:33:33 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/13 23:41:15 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putnbr_fd(int nbr, int fd)
 {
-	char	*num;
-
-	num = ft_itoa(nbr);
-	ft_putstr_fd(num, fd);
-	free(num);
+	
 }
