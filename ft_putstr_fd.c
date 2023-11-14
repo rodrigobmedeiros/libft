@@ -6,13 +6,15 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:54:51 by robernar          #+#    #+#             */
-/*   Updated: 2023/10/31 08:57:30 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/14 08:27:11 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar_fd(*s++, fd);
 	return ;
