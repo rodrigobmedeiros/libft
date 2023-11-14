@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:02:20 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/14 08:29:04 by robernar         ###   ########.rj       */
+/*   Updated: 2023/11/14 19:41:18 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -37,7 +37,7 @@ static char	char_from_int(int nbr)
 	return (nbr + 48);
 }
 
-int	ft_add_signal_if_negative(char *num, int index)
+static int	ft_add_signal_if_negative(char *num, int index)
 {
 	num[index] = '-';
 	return (-1);
