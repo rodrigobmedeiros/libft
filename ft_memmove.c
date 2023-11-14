@@ -6,7 +6,7 @@
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 05:06:36 by robernar          #+#    #+#             */
-/*   Updated: 2023/11/14 09:47:38 by robernar         ###   ########.fr       */
+/*   Updated: 2023/11/14 19:08:54 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dest, void *src, t_size n)
 {
 	char	*d;
 	char	*s;
-	t_size			i;
+	t_size	i;
 
 	i = 0;
 	d = dest;
