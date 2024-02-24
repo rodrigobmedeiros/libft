@@ -34,22 +34,37 @@ SRCS = \
 	ft_putchar_fd.c \
 	ft_strchr.c \
 	ft_strlcpy.c \
-	ft_strrchr.c
+	ft_strrchr.c \
+	ft_lstiter.c
+
+SRCSB = \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstmap.c
 
 FLAGS = -Wall -Wextra -Werror
 
 OBJS = ${SRCS:.c=.o}
+OBJSB = ${SRCSB:.c=.o}
 
 all: $(NAME)
 
 $(NAME): ${OBJS}
 	ar rc ${NAME} ${OBJS}
 
+bonus: ${OBJSB}
+	ar rc ${NAME} ${OBJSB}
+
 %.o: %.c
 	cc ${FLAGS} -c -o $@ $<
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${OBJSB}
 
 fclean:
 	rm -f ${NAME}
@@ -57,5 +72,5 @@ fclean:
 re: clean fclean all
 
 so:
-	cc -nostartfiles -fPIC $(FLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+	cc -nostartfiles -fPIC $(FLAGS) $(SRCS) $(SRCSB)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJSB)

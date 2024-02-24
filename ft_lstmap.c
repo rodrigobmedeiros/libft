@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: robernar <robernar@student.42.rj>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 08:56:44 by robernar          #+#    #+#             */
-/*   Updated: 2024/02/24 12:47:57 by robernar         ###   ########.fr       */
+/*   Created: 2024/02/24 17:19:46 by robernar          #+#    #+#             */
+/*   Updated: 2024/02/24 18:47:50 by robernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new;
+	t_list *new;
+	t_list *copy;
+	t_list *first_node;
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
+	if ((!lst) || (!f) || (!del))
 		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	while (lst)
+	{
+		new = ft_lstnew(*((*f)(lst->content)));
+		if (!new)
+		{
+			ft_lstclear(&first_node, del);
+			return (NULL);
+		}
+		if (!copy)
+		{
+			copy = new;
+			first_node = new;
+		}
+		else
+			copy->next = new;
+		lst = lst->next;
+		copy = copy->next;
+	}
+	return (first_node);
 }
+
